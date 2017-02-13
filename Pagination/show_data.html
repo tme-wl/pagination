@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<!--表格,渲染my_data数据-->
+<table>
+    <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>成绩</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for son in my_data %}
+        <tr>
+            <td>{{ son.number }}</td>
+            <td>{{ son.name }}</td>
+            <td>{{ son.sex }}</td>
+            <td>{{ son.year }}</td>
+            <td>{{ son.value }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<!--引入分页-->
+{% if pagination %}
+    {% include "pagination.html" %}
+{% endif %}
+</body>
+</html>
