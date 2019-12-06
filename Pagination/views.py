@@ -16,4 +16,5 @@ def test(request):
     end = obj.end()
     pagination = obj.pagination()
     msg = {"my_data": return_data[start: end], "pagination": pagination}
+    # return data
     return render(request, "show_data.html", msg)
