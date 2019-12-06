@@ -83,4 +83,5 @@ class Pagination(object):
                 'pagenav': pagenav,
                 'hits': self.hits,
             }
+        # return pagination
         return mypagination
